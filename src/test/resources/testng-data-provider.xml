@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Calculator Suit">
+    <listeners>
+        <listener class-name="Listener"/>
+    </listeners>
+    <test name="Test parameters from Data Provider">
+        <classes>
+            <class name="CalculatorTest">
+                <methods>
+                    <exclude name="addTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite> <!-- Suite -->

@@ -16,13 +16,4 @@
             </class>
         </classes>
     </test> <!-- Test -->
-    <test name="Test parameters from Data Provider">
-        <classes>
-            <class name="CalculatorTest">
-                <methods>
-                    <exclude name="addTest"></exclude>
-                </methods>
-            </class>
-        </classes>
-    </test>
 </suite> <!-- Suite -->
