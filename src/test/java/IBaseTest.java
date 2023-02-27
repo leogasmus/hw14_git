@@ -4,7 +4,7 @@ import org.testng.annotations.BeforeMethod;
 import java.lang.reflect.Method;
 
 public interface IBaseTest {
-    @BeforeMethod
+  /*  @BeforeMethod
     default void startTest(Method testMethod) {
         System.out.println("Починається тестування " + testMethod.getName());
     }
@@ -13,4 +13,5 @@ public interface IBaseTest {
     default void finishTest(Method testMethod) {
         System.out.println("Закінчилось тестування " + testMethod.getName());
     }
+   */
 }

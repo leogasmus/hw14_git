@@ -4,9 +4,9 @@ public class CalculatorData {
     @DataProvider
     public Object [][] getDataForAdd() {
         return new Object[][] {
-                {2, 5, 7},
-                {8, 11, 19},
-                {1, 1, 2}
+                {-5, 5},
+                {-11, 10},
+                {-8, 8}
         };
     }
     @DataProvider
