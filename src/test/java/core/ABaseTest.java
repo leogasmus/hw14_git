@@ -28,7 +28,6 @@ abstract public class ABaseTest {
     }
     @AfterClass
     public void tearDown(){
-        driver.close();
         driver.quit();
     }
 
