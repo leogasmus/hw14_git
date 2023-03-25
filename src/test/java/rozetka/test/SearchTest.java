@@ -31,4 +31,19 @@ public class SearchTest extends ABaseTest {
         Assert.assertEquals(mainPage.getQuantityItemInCart(), 2);
 
     }
+
+    @Test
+    public void showProductWithHashMap() {
+        MainPage mainPage = new MainPage();
+        mainPage.scrollToElement();
+        mainPage.getProduct().entrySet().forEach(item -> {
+            System.out.println(item.getKey() + " коштує " + item.getValue() + " гривень.");
+        });
+    }
+    @Test
+    public void showProductWithList() {
+        MainPage mainPage = new MainPage();
+        mainPage.scrollToElement();
+        mainPage.showProductTitle();
+    }
 }
