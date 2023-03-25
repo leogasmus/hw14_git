@@ -53,12 +53,12 @@ public class MainPage extends BasePage {
     public void scrollToElement() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         sleep();
-        Object prev_height = js.executeScript("return document.body.scrollHeight");
+        long prev_height = (Long) js.executeScript("return document.body.scrollHeight");
         while (true) {
             js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
             sleep();
-            Object new_height = js.executeScript("return document.body.scrollHeight");
-            if (new_height.equals(prev_height))
+            long new_height = (Long) js.executeScript("return document.body.scrollHeight");
+            if (new_height == prev_height)
                 break;
             prev_height = new_height;
         }
