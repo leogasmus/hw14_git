@@ -1,15 +1,20 @@
 package rozetka.pages;
 
 import core.BasePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.rmi.server.ExportException;
+import java.time.Duration;
+import java.util.*;
 
 public class MainPage extends BasePage {
     public final String BASE_URL = "https://rozetka.com.ua/ua/";
@@ -46,12 +51,16 @@ public class MainPage extends BasePage {
     }
 
     public void scrollToElement() {
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        int i = 0;
-        while (i < 3) {
-            jse.executeScript("window.scrollBy(0, document.body.scrollHeight)");
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        sleep();
+        Object prev_height = js.executeScript("return document.body.scrollHeight");
+        while (true) {
+            js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
             sleep();
-            i++;
+            Object new_height = js.executeScript("return document.body.scrollHeight");
+            if (new_height.equals(prev_height))
+                break;
+            prev_height = new_height;
         }
     }
 
