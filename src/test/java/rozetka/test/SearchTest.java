@@ -25,20 +25,10 @@ public class SearchTest extends ABaseTest {
         mainPage.fillSearchInputAndSearch(secondItem);
         resultPage.goToProduct();
         productPage.addToCard();
+        productPage.closeModalCart();
+
 
         Assert.assertEquals(mainPage.getQuantityItemInCart(), 2);
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
