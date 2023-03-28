@@ -5,8 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.logging.XMLFormatter;
-
 public class ProductPage extends BasePage {
     @FindBy(xpath = "//rz-product-buy-btn//button")
     private WebElement buyButton;
