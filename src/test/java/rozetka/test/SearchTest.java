@@ -2,23 +2,16 @@ package rozetka.test;
 
 import core.ABaseTest;
 import core.ConfigProvider;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import rozetka.pages.MainPage;
 import rozetka.pages.ProductPage;
 import rozetka.pages.ResultPage;
 
-import java.io.IOException;
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
-
 public class SearchTest extends ABaseTest implements ConfigProvider {
     public String firstItem = "Acer Aspire";
     public String secondItem = "FREGGIA";
-    @Test
+    @Test (invocationCount = 7)
     public void checkAddItemToCart() {
         MainPage mainPage = new MainPage();
         mainPage.fillSearchInputAndSearch(firstItem);
