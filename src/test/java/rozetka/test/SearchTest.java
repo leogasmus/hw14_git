@@ -11,7 +11,7 @@ import rozetka.pages.ResultPage;
 public class SearchTest extends ABaseTest implements ConfigProvider {
     public String firstItem = "Acer Aspire";
     public String secondItem = "FREGGIA";
-    @Test (invocationCount = 7)
+    @Test
     public void checkAddItemToCart() {
         MainPage mainPage = new MainPage();
         mainPage.fillSearchInputAndSearch(firstItem);

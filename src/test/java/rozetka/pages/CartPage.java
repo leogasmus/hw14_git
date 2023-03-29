@@ -4,10 +4,6 @@ import core.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import sun.font.EAttribute;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class CartPage extends BasePage {
     @FindBy(xpath = "//rz-purchases/ul/li[1]/rz-cart-product/div/div[1]/div/a")

@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,6 +45,7 @@ public class MainPage extends BasePage {
     }
 
     public int getQuantityItemInCart() {
+        wait.until(ExpectedConditions.textToBePresentInElement(cartCount, "2"));
         return Integer.parseInt(cartCount.getText());
     }
 
