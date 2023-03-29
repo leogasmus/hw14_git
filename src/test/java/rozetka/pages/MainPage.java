@@ -44,7 +44,6 @@ public class MainPage extends BasePage {
     }
 
     public int getQuantityItemInCart() {
-        wait.until(ExpectedConditions.visibilityOf(cartCount));
         return Integer.parseInt(cartCount.getText());
     }
 

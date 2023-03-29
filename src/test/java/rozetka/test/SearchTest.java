@@ -33,7 +33,6 @@ public class SearchTest extends ABaseTest implements ConfigProvider {
         mainPage.fillSearchInputAndSearch(secondItem);
         resultPage.goToProduct();
         productPage.addToCard();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         productPage.closeModalCart();
 
 

@@ -16,15 +16,18 @@ public class ProductPage extends BasePage {
     @FindBy(xpath = "//rz-single-modal-window/div[3]/div[1]/button")
     private WebElement closeModel;
 
+
     public ProductPage() {
         PageFactory.initElements(driver, this);
     }
     public void addToCard() {
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOf(buyButton));
         buyButton.click();
     }
     public void closeModalCart(){
-        wait.until(ExpectedConditions.visibilityOf(buyButton));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.visibilityOf(closeModel));
         closeModel.click();
     }
 }

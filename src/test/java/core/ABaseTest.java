@@ -44,7 +44,6 @@ abstract public class ABaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         // driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         BasePage.setDriver(driver);
     }
 
