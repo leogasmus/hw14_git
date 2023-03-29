@@ -4,6 +4,10 @@ import core.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class ProductPage extends BasePage {
     @FindBy(xpath = "//rz-product-buy-btn//button")
@@ -16,9 +20,11 @@ public class ProductPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
     public void addToCard() {
+        wait.until(ExpectedConditions.visibilityOf(buyButton));
         buyButton.click();
     }
     public void closeModalCart(){
+        wait.until(ExpectedConditions.visibilityOf(buyButton));
         closeModel.click();
     }
 }

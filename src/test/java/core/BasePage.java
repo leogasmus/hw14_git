@@ -1,10 +1,12 @@
 package core;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 abstract public class BasePage {
     protected static WebDriver driver;
+    protected WebDriverWait wait;
     public static void setDriver(WebDriver webDriver) {
         driver = webDriver;
     }
