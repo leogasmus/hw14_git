@@ -1,4 +1,4 @@
-package core;
+package selenium.core;
 
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;

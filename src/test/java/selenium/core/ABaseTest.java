@@ -1,4 +1,4 @@
-package core;
+package selenium.core;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

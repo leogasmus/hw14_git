@@ -1,8 +1,8 @@
-package rozetka.test;
+package selenium.rozetka.test;
 
-import core.ABaseTest;
+import selenium.core.ABaseTest;
 import org.testng.annotations.Test;
-import rozetka.pages.MainPage;
+import selenium.rozetka.pages.MainPage;
 
 public class ShowProductsTest extends ABaseTest {
     @Test

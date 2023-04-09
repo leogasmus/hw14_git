@@ -1,12 +1,12 @@
-package rozetka.test;
+package selenium.rozetka.test;
 
-import core.ABaseTest;
-import core.ConfigProvider;
+import selenium.core.ABaseTest;
+import selenium.core.ConfigProvider;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import rozetka.pages.MainPage;
-import rozetka.pages.ProductPage;
-import rozetka.pages.ResultPage;
+import selenium.rozetka.pages.MainPage;
+import selenium.rozetka.pages.ProductPage;
+import selenium.rozetka.pages.ResultPage;
 
 public class SearchTest extends ABaseTest implements ConfigProvider {
     public String firstItem = "Acer Aspire";

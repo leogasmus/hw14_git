@@ -1,4 +1,4 @@
-package core;
+package selenium.core;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;

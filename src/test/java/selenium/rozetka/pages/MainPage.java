@@ -1,6 +1,6 @@
-package rozetka.pages;
+package selenium.rozetka.pages;
 
-import core.BasePage;
+import selenium.core.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
