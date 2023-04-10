@@ -40,31 +40,38 @@ public class TestHomeWork {
         //Для кожного name вивести значення lat та lng (приклад: Leanne Graham is situated at: lat = -37.3159 and lng = 81.1496)
         System.out.println("======");
         System.out.println("name вивести значення lat та lng");
+        int size = response.getInt("size()");
+        for (int i = 0; i < size; i++) {
+            String name = response.getString("[" + i + "].name");
+            String lat = response.getString("[" + i + "].address.geo.lat");
+            String lng = response.getString("[" + i + "].address.geo.lng");
+            System.out.printf("%s is situated at: lat = %s and lng = %s%n", name, lat, lng);
+        }
 
 
         //Роздрукувати username лише для тих, в кого значення lat та lng відʼємні
         System.out.println("======");
         System.out.println("username лише для тих, в кого значення lat та lng відʼємні");
-        System.out.println(response.getList("findAll{it.address.geo.lng.toDouble() < 0.0 && it.address.geo.lat.toDouble() < 0.0}.name"));
+        System.out.println(response.getList("findAll{it.address.geo.lng.toDouble() < 0.0 && it.address.geo.lat.toDouble() < 0.0}.username"));
 
 
         //Роздрукувати username лише для тих в кого значення website закінчується на .info (приклад: Samantha - ramiro.info і так далі)
         System.out.println("======");
         System.out.println("username лише для тих в кого значення website закінчується на .info");
-        System.out.println(response.getList("findAll{it.email.endsWith('.info')}.username") + " - " + response.getList("findAll{it.email.endsWith('.info')}.email"));
+        System.out.println(response.getList("findAll{it.website.endsWith('.info')}.username") + " - " + response.getList("findAll{it.website.endsWith('.info')}.website"));
 
 
         //!! треба name Вивести на екран name в якого значення lng найбільше
         System.out.println("======");
         System.out.println("name в якого значення lng найбільше");
-        System.out.println(response.getDouble("collect{it.address.geo.lng.toDouble()}.max()"));
+        System.out.println(response.getString("max{it.address.geo.lng.toDouble()}.name"));
 
 
 
         //!!! треба name Вивести на екран name в якого найдовша catchPhrase
         System.out.println("======");
         System.out.println("name в якого найдовша catchPhrase");
-        System.out.println(response.getInt("collect{it.company.catchPhrase.length()}.max()"));
+        System.out.println(response.getString("max{it.company.catchPhrase.length()}.name"));
 
     }
 }
